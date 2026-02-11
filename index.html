@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Render test</title>
+</head>
+<body>
+  <h1>Render test site</h1>
+
+  <input id="txt" placeholder="Type something">
+
+  <button onclick="go()">Click me</button>
+
+  <p id="out"></p>
+
+  <script>
+    function go() {
+      const value = document.getElementById("txt").value;
+      document.getElementById("out").textContent =
+        "You typed: " + value;
+    }
+  </script>
+</body>
+</html>
