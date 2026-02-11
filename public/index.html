@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Render Test Site</title>
+</head>
+<body>
+  <h1>Hello from frontend</h1>
+
+  <button id="btn">Call API</button>
+  <pre id="out"></pre>
+
+  <script>
+    document.getElementById("btn").onclick = async () => {
+      const r = await fetch("/api/hello");
+      const j = await r.json();
+      document.getElementById("out").textContent =
+        JSON.stringify(j, null, 2);
+    };
+  </script>
+</body>
+</html>

@@ -1,8 +1,11 @@
+const path = require("path")
+
 const express = require("express");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
 
 const app = express();
+app.use(express.static(path.join(__dirname, "public")));
 
 const options = {
   definition: {
